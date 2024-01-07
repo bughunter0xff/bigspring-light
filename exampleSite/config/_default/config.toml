@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://bughunter0xff.github.io/website-demo/"
+baseURL = "https://bughunter0xff.github.io/website-demo/exampleSite"
 title = "Therefore Technologies"
 theme = "bigspring-light"
 # post pagination
