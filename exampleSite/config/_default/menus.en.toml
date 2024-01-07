@@ -1,0 +1,54 @@
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+
+[[main]]
+name = "Services"
+url = "services/"
+weight = 3
+
+[[main]]
+name = "OEM"
+url = "oem/"
+weight = 4
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 5
+
+[[main]]
+name = "FAQ"
+url = "faq/"
+weight = 6
+
+# footer menu left
+[[footer_left]]
+name = "About Us"
+url = "#"
+
+[[footer_left]]
+name = "Contact Us"
+url = "contact/"
+
+[[footer_left]]
+name = "Services"
+url = "services/"
+
+
+
+# footer menu right
+[[footer_right]]
+name = "Privacy Policy"
+url = "privacy-policy/"
+
+[[footer_right]]
+name = "Terms & Conditions"
+url = "terms-conditions/"
+
+[[footer_right]]
+name = "FAQ"
+url = "faq/"
