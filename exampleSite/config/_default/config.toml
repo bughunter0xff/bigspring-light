@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://thereforr.onrender.com/"
+baseURL = "https://thereforr.onrender.com/exampleSite"
 title = "Therefore Technologies"
 theme = "bigspring-light"
 # post pagination
