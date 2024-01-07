@@ -1,0 +1,374 @@
+html body {
+  background-color: $body-color;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+::selection {
+  background-color:darken($color: $primary-color, $amount: 10);
+  color: $white;
+}
+
+body::-webkit-scrollbar {
+  width: .5rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  outline: 2px solid #fff;
+}
+
+
+/* preloader */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  filter: contrast(110%) sharpen(1px);
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a,
+button,
+select {
+  cursor: pointer;
+  transition: .2s ease;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+a:hover {
+  color: $primary-color;
+}
+
+.slick-slide {
+  outline: 0;
+}
+
+.section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  overflow: hidden;
+
+  &-title {
+    margin-bottom: 30px;
+  }
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.border-default {
+  border-color: $border-color !important;
+}
+
+/* overlay */
+
+.overlay {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    opacity: .5;
+  }
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.bg-light {
+  background-color: $light !important;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.rounded-lg{
+  border-radius: 10px !important;
+}
+
+.shadow{
+  box-shadow: 0 12px 24px -6px rgba(45,67,121,.10) !important;
+}
+
+// form control
+
+.form-control {
+  &:focus {
+    outline: 0;
+    border-color: $primary-color;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $text-color;
+  }
+}
+
+textarea.form-control {
+  height: 100px !important;
+}
+
+.list-unstyled{
+  li{
+    margin-bottom: 10px;
+  }
+}
+
+.check-mark{
+  position: relative;
+  padding-left: 0px;
+  &::before{
+    position: absolute;
+    content: "\f058";
+    color: $primary-color;
+    font-size: 25px;
+    font-family: $icon-font;
+    font-weight: 900;
+    left: -30px;
+    top: 3px;
+  }
+  svg{
+    position: absolute;
+    color: $primary-color;
+    font-size: 25px;
+    left: -30px;
+    top: 3px;
+  }
+}
+
+.feature-card {
+  background-color: rgba(73, 239, 129, 0.9); /* Semi-transparent white background */
+  border: 1px solid rgba(47, 156, 58, 0.1); /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 15px; /* Padding inside the card */
+  padding-block: 10px;
+  box-shadow: 0 2px 4px rgba(187, 238, 192, 0.05); /* Subtle shadow */
+  width: 360px; /* Fixed width */
+  height: 290px; /* Fixed height */
+  margin: auto; /* For centering if needed */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Darker shadow on hover */
+}
+
+.site-footer { /* Ensure this class matches the class or element used in footer.html */
+  width: 100%;
+  height: fit-content;
+  padding-top: 5%;
+  /* Define height or padding as needed for your footer */
+}
+
+.oem-logo img {
+  max-width: 110px; /* Maximum width of the logo */
+  max-height: 85px; /* Maximum height of the logo */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* To remove any extra space beneath the image */
+  margin: 0 auto; /* Center align if needed */
+}
+
+.logos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  overflow: visible;
+  justify-content: center;
+
+}
+
+.logo-item img {
+  transition: transform 0.3s ease;
+}
+
+.logo-item img {
+  width: 100%; /* Adjust width as needed */
+  max-width: 150px; /* or any size that fits well */
+  height: auto;
+  background: white;
+  padding: 0.5rem; /* Add padding to create a visual 'buffer' around the logo */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.logo-item img {
+  animation: fadeIn 1s;
+}
+
+@media (max-width: 768px) {
+  .logos-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+.logo-item:hover:after {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.logo-item:hover img {
+  transform: scale(1.2); /* Increase the scale to create a zoom effect */
+}
+
+.oem-heading {
+  text-align: center; /* Centers the text */
+  margin-bottom: 120px !important;
+  margin-top: 10px !important;
+}
+
+.content { /* This class name should match the main content wrapper in your layout */
+  flex: 1;
+  /* other styles */
+}
+
+.dropdown-list {
+  /* Initial style for the dropdown */
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 200px; /* Adjust as needed */
+  z-index: 1000; /* To stack above other content */
+}
+
+.dropdown-list li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd; /* Optional */
+}
+
+.dropdown-list li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-list li:hover {
+  background-color: #f6f6f6; /* Hover effect */
+}
+
+
+.heading-above-logos {
+  text-align: center; /* Centers the heading text */
+  margin-bottom: 80px !important; /* Increase or decrease for space below the heading */
+}
+
+.logo-row {
+  margin-bottom: 5px !important;
+}
+
+.swiper-container {
+  max-width: 100%;
+  margin-top: 10%;
+  height: 400px;
+  background-color: $white;
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  background: #75f0ac; /* Color of bullets */
+  opacity: 1; /* Non-active bullet opacity */
+}
+.swiper-pagination-bullet-active {
+  background: #e8b386; /* Color of active bullet */
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #7aec89; /* Adjust arrow color */
+  /* Add more styles if needed */
+}
+
+.swiper-slide-heading {
+  font-size: 35px; /* Adjust heading font size */
+  margin-bottom: 15px; /* Space between heading and content */
+}
+
+.swiper-slide {
+  max-width: relative; /* Adjust this value as needed */
+  margin: 0 auto; /* Centers the slide in the swiper-container */
+  padding: 20px; /* Optional: Adds padding inside the slide */
+  text-align: center; /* Optional: Centers the text */
+  justify-content: center;
+}
+.swiper-slide-content {
+  font-size: 20px;
+  word-break: break-all;
+  background: #ffffff; /* or any color you want for the box */
+  padding: 20px; /* Adjust as needed */
+  margin: auto; /* Center the content box */
+  max-width: 900px; /* Max width of the content box */
+  text-align: left; /* Aligns text to the left */
+}
+
+.swiper-slide-content ul {
+ margin: 0;
+}
+
+.swiper-slide-content li::before {
+  content: '•';
+  color: #7acc4d;
+  font-weight: bold;
+  position: relative; // Position the bullet absolutely within the list item
+  left: 0; // Position the bullet at the start of the list item
+  top: 0; // Align to the top, adjust as needed
+}
+
+.swiper-slide-content li {
+font-size: 2em; /* Adjust as needed */
+margin-bottom: 0.5em; /* Adjust space between list items */
+color: #7acc4d; /* Text color */
+}

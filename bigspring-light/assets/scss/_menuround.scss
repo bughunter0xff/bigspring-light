@@ -1,0 +1,26 @@
+.navbar-nav .nav-item {
+    margin-right: 25px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    &:last-child {
+      margin-right: 0; // Remove the margin for the last item to avoid extra spacing at the end
+    }
+}
+  
+.navbar-nav .nav-item .nav-link {
+    background-color: $primary-color; // The color from your button
+    color: $white !important;
+    border-radius: 30px; // Border radius to match your button
+    padding: 12px 30px; // Padding to match the size of your button
+    display: inline-block;
+    
+    // Smooth transition for hover effects and background color
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1); // Scale up the button to 110% of its original size
+    }
+}
+  
+  
